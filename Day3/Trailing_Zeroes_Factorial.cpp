@@ -6,7 +6,7 @@ int main() {
     int n;
     cin >> n;
     
-    int base = 5;
+    int base = 5, ans = 0;
     while(n / base){
         ans += n / base;
         base *= 5;
