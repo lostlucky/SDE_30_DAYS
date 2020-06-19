@@ -16,7 +16,7 @@ int main() {
     int n;
     cin >> n;
     
-    int l = 0, r = 100, m;
+    int l = 0, r = A, m;
     
     while(l <= r){
         m = l + (r - l) / 2;
