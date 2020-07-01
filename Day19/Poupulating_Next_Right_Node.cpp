@@ -16,6 +16,30 @@ public:
 };
 */
 
+0(1) space 
+
+class Solution {
+public:
+    Node* connect(Node* root) {
+        if(!root) return NULL;
+        Node* traverse = root;
+        while(traverse -> left){
+            Node* p = traverse;
+            while(p){
+                p -> left -> next = p -> right;
+                if(p -> next) p -> right -> next = p -> next -> left;
+                p = p -> next;
+            }
+            traverse = traverse -> left;
+        }
+        return root;
+    }
+};
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+0(N) space
+
 class Solution {
 public:
     Node* connect(Node* root) {
